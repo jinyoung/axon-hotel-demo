@@ -19,7 +19,7 @@ import java.util.UUID;
 import org.springframework.stereotype.Component;
 
 @Component
-public class UUIDProvider {
+public class UUIDProvider {  //FOCUS: 
 
     public UUID getAccountId() {
         return UUID.randomUUID();

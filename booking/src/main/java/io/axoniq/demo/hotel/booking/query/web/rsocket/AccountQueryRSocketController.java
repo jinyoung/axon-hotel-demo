@@ -45,7 +45,7 @@ public class AccountQueryRSocketController {
                                          ResponseTypes.multipleInstancesOf(AccountResponseData.class));
     }
 
-    // Request-Stream
+    // Request-Stream  //FOCUS: stream
     @MessageMapping("accounts.all")
     public Flux<AccountResponseData> all_subscribe() {
         return reactorQueryGateway

@@ -70,7 +70,7 @@ public class GenerateEventsForDemo {
         this.uuidProvider = uuidProvider;
     }
 
-    // Sends commands to Booking context every 5 minutes
+    // Sends commands to Booking context every 5 minutes   : FOCUS:
     @Scheduled(cron = "0 */5 * ? * *")
     public void sendCommandsForBooking() {
         {

@@ -71,6 +71,8 @@ class RoomAvailabilityHandler {
 
     @EventHandler
     void on(RoomBookedEvent event) {
+
+        //FOCUS:  아이고.. 2본을 만드네 결국은. 이 부분이 설득이 될까?
         RoomAvailabilityEntity entity = this.roomAvailabilityEntityRepository.getById(event.getRoomNumber());
         entity.setRoomStatus(RoomStatus.BOOKED);
         entity.getBookings().add(new BookingEmbeddable(event.getRoomBooking().getBookingId().toString(),

@@ -34,13 +34,13 @@ java -jar rsc.jar --request --data "{\"userName\":\"john\",\"password\":\"drowss
 085081c1-44ef-441e-bee7-8ae274204d51
 ```
 
-##### Get all Accounts - (Request-Response) - `accounts.all`
+##### Get all Accounts - (Request-Response) - `accounts.all` 
 
 ```shell script
 java -jar rsc.jar --request  --route accounts.all ws://localhost:7000/rsocket
 ```
 
-##### Subscribe to all Accounts - (Request-Stream) - `accounts.all`
+##### Subscribe to all Accounts - (Request-Stream) - `accounts.all`  //FOCUS: stream
 
 ```shell script
 java -jar rsc.jar --stream  --route accounts.all ws://localhost:7000/rsocket

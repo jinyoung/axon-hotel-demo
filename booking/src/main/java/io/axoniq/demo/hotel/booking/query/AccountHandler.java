@@ -51,6 +51,8 @@ class AccountHandler {
         AccountEntity entity = new AccountEntity(event.getAccountId().toString(), event.getUserName(), event.getPassword());
         this.accountEntityRepository.save(entity);
         /* sending it to subscription queries of type FindAccount, but only if the account id matches. */
+
+        //FOCUS: query 상에서도 발생한 변경사항에 대한 증분을 clent 까지 emit 할 수 있게 하는 것으로 보인다. RSocket 사용.
         queryUpdateEmitter.emit(FindAccount.class,
                                 query -> query.getAccountId().equals(event.getAccountId()),
                                 convert(entity));

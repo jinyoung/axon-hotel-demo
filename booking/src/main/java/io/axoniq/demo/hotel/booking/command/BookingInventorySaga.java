@@ -37,7 +37,7 @@ public class BookingInventorySaga {
 
     @Autowired
     private transient CommandGateway commandGateway;
-    private UUID inventoryRoomId;
+    private UUID inventoryRoomId;    // FOCUS:  process instance contexts 가 있구만.
 
     @StartSaga
     @SagaEventHandler(associationProperty = "roomNumber")
